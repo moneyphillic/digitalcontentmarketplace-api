@@ -1,0 +1,16 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    app.userdata:
+        class: AppBundle\Utils\UserData
+        arguments: ["@service_container"]
+
+    app.repo.userdata:
+        class: AppBundle\Repository\UserDataRepository
+        arguments: [ "@doctrine.orm.entity_manager" ]
+

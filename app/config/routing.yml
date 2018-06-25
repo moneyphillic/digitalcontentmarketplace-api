@@ -1,0 +1,31 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+register:
+    path: /register
+    methods: [GET, POST]
+    controller: AppBundle:UserApi:register
+
+login:
+    path: /login
+    controller: AppBundle:UserApi:login
+
+customlogin:
+    path: /customlogin
+    methods: [GET, POST]
+    controller: AppBundle:UserApi:customLogin
+
+logout:
+    path: /logout
+    controller: AppBundle:UserApi:logout
+
+getuserdata:
+    path: /getuserdata
+    methods: [GET, POST]
+    controller: AppBundle:UserApi:getUserData
+
+uploadfile:
+    path: /uploadimage
+    methods: [GET, POST]
+    controller: AppBundle:UserApi:uploadImage
